@@ -1,0 +1,425 @@
+@import "@/styles/mixins";
+
+.categories {
+  margin: rem(10) 0 0;
+
+  :global(.ant-checkbox-wrapper) {
+    margin: 0 rem(20) rem(10) 0;
+  }
+}
+
+.screen {
+  background: $pastel-1;
+  padding: rem(20) rem(20) rem(0);
+
+  &Outer {
+    margin: 0 rem(-20);
+  }
+}
+
+.table {
+  &Icon {
+    img {
+      width: rem(40);
+      border-radius: rem(12);
+    }
+  }
+
+  &Responsive {
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: rem(50);
+  }
+}
+
+.banner {
+  padding: rem(20);
+  margin-bottom: rem(40);
+  border-radius: rem(14);
+  background: $white;
+  border: 1px solid $border;
+  position: relative;
+
+  .bannerFlex {
+    display: flex;
+    // justify-content: center;
+
+    &Info {
+      font-size: rem(14);
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      flex-grow: 1;
+      align-self: flex-end;
+    }
+
+    @media (max-width: $sm-max-width) {
+      flex-direction: column;
+
+      &Info {
+        text-align: left;
+        align-self: flex-start;
+        padding-left: rem(75);
+      }
+    }
+  }
+
+  .logo {
+    margin-right: rem(15);
+
+    svg {
+      width: rem(80);
+      height: rem(80);
+
+      * {
+        fill: $blue-light;
+      }
+    }
+  }
+
+  @media (max-width: $sm-max-width) {
+    h1 {
+      font-size: rem(24);
+    }
+
+    .logo {
+      svg {
+        width: rem(60);
+        height: rem(60);
+      }
+    }
+  }
+
+
+  :global(.icn) {
+    position: absolute;
+    padding: rem(10);
+    top: rem(7);
+    right: rem(10);
+    cursor: pointer;
+
+    svg {
+      * {
+        fill: $dark-gray-2;
+      }
+    }
+
+    &:hover,
+    &:focus, 
+    &:active {
+      svg {
+        opacity: 1;
+
+        * {
+          fill: $blue;
+        }
+      }
+    }
+  }
+
+  :global(.github) {
+    position: absolute;
+    padding: rem(10);
+    top: rem(6);
+    right: rem(45);
+    cursor: pointer;
+
+    svg {
+      height: auto;
+      width: 18px;
+      * {
+        stroke: $dark-gray-2;
+        stroke-width: 3px;
+      }
+    }
+
+    &:hover,
+    &:focus, 
+    &:active {
+      svg {
+        opacity: 1;
+
+        * {
+          stroke: $blue;
+        }
+      }
+    }
+  }
+}
+
+.list {
+  margin-bottom: rem(30);
+  width: 33%;
+  max-width: 33%;
+  padding-right: rem(20);
+
+  @at-root {
+    .listSingle {
+      .list {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+
+    .listDouble {
+      .list {
+        width: 50% !important;
+        max-width: 50% !important;
+      }
+    }
+  }
+
+  @media (max-width: $md-max-width) {
+    width: 50%;
+    max-width: 50%;
+  }
+
+  @media (max-width: $sm-max-width) {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &Title {
+    background: $primary;
+    font-size: rem(24);
+    padding: 0 rem(14);
+    border-radius: 15px;
+    line-height: 1.1;
+    color: $white;
+    margin-bottom: rem(20);
+    white-space: nowrap;
+    display: inline-flex;
+    font-weight: 700;
+  }
+
+  &Item {
+    margin-right: rem(20);
+    margin-bottom: rem(10);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $dark-gray-5;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue;
+    }
+
+    &Container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &Image {
+      margin-right: rem(8);
+      display: flex;
+
+      img {
+        width: rem(32);
+        height: rem(32);
+        border-radius: 5px;
+      }
+    }
+
+    &Icon {
+      margin-right: rem(-10);
+      img {
+        width: rem(60);
+        height: rem(60);
+        border-radius: rem(14);
+      }
+    }
+
+    &Logo {
+      margin-right: rem(-10);
+      img {
+        height: rem(30);
+        border-radius: rem(6);
+      }
+    }
+  }
+}
+
+.modal {
+  :global(.ant-modal-body) {
+    padding: rem(7);
+  }
+
+  &Wrapper {
+    padding: rem(20) rem(20) rem(20) rem(45);
+    background: $white;
+    position: relative;
+
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: rem(15);
+      bottom: rem(18);
+      left: rem(15);
+      width: rem(7);
+      border-radius: 100px;
+      background: $blue;
+    }
+  }
+
+  &Logo {
+    margin-right: rem(15);
+
+    img {
+      height: 48px;
+      border-radius: rem(5);
+    }
+  }
+
+  &Footer {
+    font-size: rem(14);
+
+    :global(.icn) {
+      cursor: pointer;
+      position: relative;
+      top: -1px;
+  
+      svg {
+        * {
+          fill: $dark-gray-2;
+        }
+      }
+  
+      &:hover,
+      &:focus, 
+      &:active {
+        svg {
+          opacity: 1;
+  
+          * {
+            fill: $blue;
+          }
+        }
+      }
+    }
+  }
+
+  &Links {
+    font-size: rem(14);
+
+    :global(.icn) {
+      position: relative;
+      top: -1px;
+  
+      svg {
+        * {
+          fill: $dark-gray-2;
+        }
+      }
+    }
+  }
+
+  &Link {
+    color: $blue;
+    cursor: pointer;
+
+    &:hover,
+    &:focus, 
+    &:active {
+      color: $blue-light;
+    }
+  }
+
+  &Nft {
+    float: right;
+    max-width: rem(120);
+    margin-left: rem(30);
+    border-radius: 8px;
+  }
+}
+
+// dark theme
+[data-theme="dark"] {
+  .categories {
+    label {
+      color: $dark-gray-2 !important;
+    }
+  }
+
+  .banner {
+    background: lighten($dark-gray-5, 5%);
+    border-color: transparent;
+
+    :global(.icn) {
+      &:hover,
+      &:focus, 
+      &:active {
+        svg {
+          * {
+            fill: $white;
+          }
+        }
+      }
+    }
+
+    :global(.github) {
+      &:hover,
+      &:focus, 
+      &:active {
+        svg {
+          * {
+            stroke: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .screen {
+    background: $dark-gray-6;
+  }
+
+  .list {
+    &Item {
+      color: $dark-gray-1;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $white;
+      }
+    }
+  }
+
+  .modal {
+    :global(.ant-modal-body) {
+      color: $dark-gray-1 !important;
+    }
+
+    &Wrapper {
+      background: $dark-gray-5;
+    }
+
+    &Footer {
+      :global(.icn) {
+        &:hover,
+        &:focus, 
+        &:active {
+          svg {
+            * {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+
+    &Link {
+      color: $blue-light;
+
+      &:hover,
+      &:focus, 
+      &:active {
+        color: lighten($blue-light, 3%);
+      }
+    }
+  }
+}

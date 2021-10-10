@@ -1,0 +1,10 @@
+name = "ray-cardanolist"
+type = "webpack"
+account_id = "792461088a4c863230f3faee467094b1"
+# workers_dev = true
+route = "cardanolist.io/*"
+zone_id = "3722e2d8083ee68ca81ba187ddf9b00c"
+
+[site]
+bucket = "../public"
+entry-point = "workers-site"
