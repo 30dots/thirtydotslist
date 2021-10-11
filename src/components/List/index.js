@@ -25,10 +25,12 @@ const columnsProjects = [
     render: (record, records) => {
       return (
         <div className={style.tableIcon}>
-          <img
-            src={`${githubUrl + urls.projects}/icon/${records.icon}`}
-            alt={records.name}
-          />
+          <a href={records.url} target="_blank" rel="noopener noreferrer">
+            <img
+              src={`${githubUrl + urls.projects}/icon/${records.icon}`}
+              alt={records.name}
+            />
+          </a>
         </div>
       )
     },
@@ -37,6 +39,7 @@ const columnsProjects = [
     title: "Name",
     dataIndex: "name",
     key: "name",
+    render: (record, records) => <a href={records.url} target="_blank" rel="noopener noreferrer">{record}</a>
   },
   {
     title: "Category",
@@ -90,10 +93,12 @@ const columnsRegular = [
     render: (record, records) => {
       return (
         <div className={style.tableIcon}>
-          <img
-            src={`${githubUrl + urls.tokens}/icon/${records.icon}`}
-            alt={records.name}
-          />
+          <a href={records.url} target="_blank" rel="noopener noreferrer">
+            <img
+              src={`${githubUrl + urls.tokens}/icon/${records.icon}`}
+              alt={records.name}
+            />
+          </a>
         </div>
       )
     },
@@ -102,16 +107,19 @@ const columnsRegular = [
     title: "Ticker",
     dataIndex: "ticker",
     key: "ticker",
+    render: (record, records) => <a href={records.url} target="_blank" rel="noopener noreferrer">{record}</a>
   },
   {
     title: "Name",
     dataIndex: "name",
     key: "name",
+    render: (record, records) => <a href={records.url} target="_blank" rel="noopener noreferrer">{record}</a>
   },
   {
     title: "Fingerprint",
     dataIndex: "fingerprint",
     key: "fingerprint",
+    render: (record, records) => <a href={`https://cardanoscan.io/token/${records.fingerprint}`} target="_blank" rel="noopener noreferrer">{record}</a>
   },
   {
     title: "Links",
@@ -144,10 +152,12 @@ const columnsNFT = [
     render: (record, records) => {
       return (
         <div className={style.tableIcon}>
-          <img
-            src={`${githubUrl + urls.nft}/icon/${records.icon}`}
-            alt={records.name}
-          />
+          <a href={records.url} target="_blank" rel="noopener noreferrer">
+            <img
+              src={`${githubUrl + urls.nft}/icon/${records.icon}`}
+              alt={records.name}
+            />
+          </a>
         </div>
       )
     },
@@ -156,6 +166,7 @@ const columnsNFT = [
     title: "Name",
     dataIndex: "name",
     key: "name",
+    render: (record, records) => <a href={records.url} target="_blank" rel="noopener noreferrer">{record}</a>
   },
   {
     title: "Description",

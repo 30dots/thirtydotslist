@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://cardanolist.io",
-    title: "CardanoList - Curated list of Cardano projects by Ray Network",
+    title: "CardanoList.io - Curated list of Cardano projects by Ray Network",
   },
   plugins: [
     "gatsby-plugin-sitemap",
@@ -15,7 +15,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `CardanoList - Curated list of Cardano projects by Ray Network`,
+        name: `CardanoList.io - Curated list of Cardano projects by Ray Network`,
         icon: `static/resources/favicon.svg`,
       },
     },
