@@ -204,6 +204,7 @@ const columnsNFT = [
 ]
 
 const List = () => {
+  const [loading, setLoading] = useState(true)
   const [view, setView] = useState(store.get('CARDANOLIST.view') || 'List')
   const [checkedList, setCheckedList] = useState([])
   const [categoriesList, setCategoriesList] = useState([])
@@ -258,6 +259,9 @@ const List = () => {
     setUpdated([dataProjects.updated, dataTokens.updated, dataNft.updated].reduce((a, b) => {
       return new Date(a) > new Date(b) ? a : b;
     }))
+    setTimeout(() => {
+      setLoading(false)
+    }, 200)
   }
 
   const saveList = () => {
@@ -342,127 +346,136 @@ const List = () => {
 
   return (
     <div>
-      <div className="ray__block mb-0">
-        <div className={style.categories}>
-          <Checkbox.Group options={categoriesList} value={checkedList} onChange={onChangeCategory} />
+      {loading && (
+        <div className="ray__block text-center mb-0">
+          <div class="spinner-border spinner-border-lg text-primary mt-5" role="status"><span class="visually-hidden">Loading...</span></div>
         </div>
-        <div className="mb-2">
-          <Radio.Group options={['List', 'Icon', 'Logo', 'Table']} value={view} onChange={onChangeView} />
-        </div>
-      </div>
-      <div className="ray__block">
-        <div className={style.screenOuter}>
-          <div className={style.screen} id="screenshotList">
-            <div className={style.banner}>
-              <Tooltip title="Visit Github">
-                <a
-                  className="github"
-                  href="https://github.com/ray-network/cardano-verified/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SVGGithub />
-                </a>
-              </Tooltip>
-              <Tooltip title="Take a screenshot">
-                <span
-                  className="icn"
-                  onClick={() => saveList()}
-                  onKeyPress={() => saveList()}
-                  role="button"
-                  tabIndex="-1"
-                >
-                  <SVGCamera />
-                </span>
-              </Tooltip>
-              <div className={style.bannerFlex}>
-                <div className="d-flex">
-                  <div>
-                    <div className={style.logo}>
-                      <SVGCardano />
+      )}
+      {!loading && (
+        <div>
+          <div className="ray__block mb-0">
+            <div className={style.categories}>
+              <Checkbox.Group options={categoriesList} value={checkedList} onChange={onChangeCategory} />
+            </div>
+            <div className="mb-2">
+              <Radio.Group options={['List', 'Icon', 'Logo', 'Table']} value={view} onChange={onChangeView} />
+            </div>
+          </div>
+          <div className="ray__block">
+            <div className={style.screenOuter}>
+              <div className={style.screen} id="screenshotList">
+                <div className={style.banner}>
+                  <Tooltip title="Visit Github">
+                    <a
+                      className="github"
+                      href="https://github.com/ray-network/cardano-verified/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <SVGGithub />
+                    </a>
+                  </Tooltip>
+                  <Tooltip title="Take a screenshot">
+                    <span
+                      className="icn"
+                      onClick={() => saveList()}
+                      onKeyPress={() => saveList()}
+                      role="button"
+                      tabIndex="-1"
+                    >
+                      <SVGCamera />
+                    </span>
+                  </Tooltip>
+                  <div className={style.bannerFlex}>
+                    <div className="d-flex">
+                      <div>
+                        <div className={style.logo}>
+                          <SVGCardano />
+                        </div>
+                      </div>
+                      <div>
+                        <h1 className="mb-0">
+                          <strong>CardanoList.io</strong>
+                        </h1>
+                        <div className="text-muted">
+                          Cardano Ecosystem
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <h1 className="mb-0">
-                      <strong>CardanoList.io</strong>
-                    </h1>
-                    <div className="text-muted">
-                      Cardano Ecosystem
+                    <div className={`${style.bannerFlexInfo} text-muted`}>
+                      <div>Curated by cardanolist.io</div>
+                      <div>{updated && `Updated ${format(new Date(updated), 'MMMM dd, yyyy HH:mm')}`}</div>
                     </div>
                   </div>
                 </div>
-                <div className={`${style.bannerFlexInfo} text-muted`}>
-                  <div>Curated by cardanolist.io</div>
-                  <div>{updated && `Updated ${format(new Date(updated), 'MMMM dd, yyyy HH:mm')}`}</div>
+                <div>
+                  {view !== 'Table' && (
+                    <Masonry className={`${checkedList.length === 1 ? style.listSingle : ''} ${checkedList.length === 2 ? style.listDouble : ''}`}>
+                      {Object.keys(projectsProcessed).map((key) => {
+                        return (
+                          <div key={key} className={style.list}>
+                            <Category data={projects[key]} title={key} type="projects" />
+                          </div>
+                        )
+                      })}
+                      {checkedList.includes('Tokens') && (
+                        <div className={style.list}>
+                          <Category data={tokens} title="Tokens" type="tokens" />
+                        </div>
+                      )}
+                      {checkedList.includes('NFT') && (
+                        <div className={style.list}>
+                          <Category data={nft} title="NFT" type="nft" />
+                        </div>
+                      )}
+                    </Masonry>
+                  )}
+                  {view === 'Table' && (
+                    <div>
+                      {projectsArray.length > 0 && (
+                        <div>
+                          <h5><strong>Projects</strong></h5>
+                          <div className={style.tableResponsive}>
+                            <Table
+                              dataSource={projectsArray}
+                              columns={columnsProjects}
+                              pagination={false}
+                            />
+                          </div>
+                        </div>
+                      )}
+                      {checkedList.includes('Tokens') && (
+                        <div>
+                          <h5><strong>Regular Tokens</strong></h5>
+                          <div className={style.tableResponsive}>
+                            <Table
+                              dataSource={tokens}
+                              columns={columnsRegular}
+                              pagination={false}
+                            />
+                          </div>
+                        </div>
+                      )}
+                      {checkedList.includes('NFT') && (
+                        <div>
+                          <h5><strong>NFT Projects</strong></h5>
+                          <div className={style.tableResponsive}>
+                            <Table
+                              dataSource={nft}
+                              columns={columnsNFT}
+                              pagination={false}
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
-            <div>
-              {view !== 'Table' && (
-                <Masonry className={`${checkedList.length === 1 ? style.listSingle : ''} ${checkedList.length === 2 ? style.listDouble : ''}`}>
-                  {Object.keys(projectsProcessed).map((key) => {
-                    return (
-                      <div key={key} className={style.list}>
-                        <Category data={projects[key]} title={key} type="projects" />
-                      </div>
-                    )
-                  })}
-                  {checkedList.includes('Tokens') && (
-                    <div className={style.list}>
-                      <Category data={tokens} title="Tokens" type="tokens" />
-                    </div>
-                  )}
-                  {checkedList.includes('NFT') && (
-                    <div className={style.list}>
-                      <Category data={nft} title="NFT" type="nft" />
-                    </div>
-                  )}
-                </Masonry>
-              )}
-              {view === 'Table' && (
-                <div>
-                  {projectsArray.length > 0 && (
-                    <div>
-                      <h5><strong>Projects</strong></h5>
-                      <div className={style.tableResponsive}>
-                        <Table
-                          dataSource={projectsArray}
-                          columns={columnsProjects}
-                          pagination={false}
-                        />
-                      </div>
-                    </div>
-                  )}
-                  {checkedList.includes('Tokens') && (
-                    <div>
-                      <h5><strong>Regular Tokens</strong></h5>
-                      <div className={style.tableResponsive}>
-                        <Table
-                          dataSource={tokens}
-                          columns={columnsRegular}
-                          pagination={false}
-                        />
-                      </div>
-                    </div>
-                  )}
-                  {checkedList.includes('NFT') && (
-                    <div>
-                      <h5><strong>NFT Projects</strong></h5>
-                      <div className={style.tableResponsive}>
-                        <Table
-                          dataSource={nft}
-                          columns={columnsNFT}
-                          pagination={false}
-                        />
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
           </div>
         </div>
-      </div>
+      )}
       <Modal
         title={null}
         footer={null}
