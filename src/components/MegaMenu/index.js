@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { Tooltip } from "antd"
 import { useDispatch, useSelector } from "react-redux"
 import {
-  SVGRay,
+  SVGList,
   SVGWallet,
   SVGCardano,
   SVGSun,
@@ -42,7 +42,7 @@ const MegaMenu = () => {
       <div className="ray__block mb-3">
         <div className={style.menu}>
           <Link to="/" className={`${style.menuLogo} me-4`}>
-            <SVGRay />
+            <SVGList />
             <span>
               <strong>CardanoList.io</strong>
             </span>

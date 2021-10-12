@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300px" height="300px" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>cardanolist</title>
+    <g id="New-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cardanolist">
+            <rect id="Rectangle" fill="#3FCB9B" fill-rule="nonzero" x="0" y="0" width="300" height="300" rx="37.8"></rect>
+            <path d="M119,72 L119,181 L228,181 L228,228 L72,228 L72,72 L119,72 Z" id="Combined-Shape" fill="#0C0C1B"></path>
+        </g>
+    </g>
+</svg>

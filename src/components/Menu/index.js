@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { useLocation } from "@reach/router"
 import { useDispatch, useSelector } from "react-redux"
 import {
-  SVGRay,
+  SVGList,
   SVGWallet,
   SVGSun,
   SVGMoon,
@@ -47,7 +47,7 @@ const Menu = () => {
       <div className="ray__block mb-0">
         <div className={style.menu}>
           <Link to="/" className={`${style.menuLogo} me-4`}>
-            <SVGRay />
+            <SVGList />
             <span>
               <strong>CardanoList.io</strong>
             </span>

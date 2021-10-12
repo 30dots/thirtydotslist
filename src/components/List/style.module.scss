@@ -37,7 +37,6 @@
   margin-bottom: rem(40);
   border-radius: rem(14);
   background: $white;
-  border: 1px solid $border;
   position: relative;
 
   .bannerFlex {
@@ -180,7 +179,7 @@
   }
 
   &Title {
-    background: $primary;
+    background: $success;
     font-size: rem(24);
     padding: 0 rem(14);
     border-radius: 15px;
@@ -261,7 +260,7 @@
       left: rem(15);
       width: rem(7);
       border-radius: 100px;
-      background: $blue;
+      background: $success;
     }
   }
 
@@ -378,6 +377,10 @@
   }
 
   .list {
+    &Title {
+      color: $dark;
+    }
+
     &Item {
       color: $dark-gray-1;
 

@@ -2,6 +2,7 @@ import SVGMinterr from "../static/resources/minterr.svg"
 import SVGFavicon from "../static/resources/favicon.svg"
 import SVGRay from "../static/resources/ray.svg"
 import SVGCardano from "../static/resources/cardano.svg"
+import SVGList from "../static/resources/cardanolist.svg"
 
 import IMGTwitter from "../static/resources/social/twitter.svg"
 import IMGTelegram from "../static/resources/social/telegram.svg"
@@ -126,4 +127,5 @@ export {
   SVGReload,
   SVGCamera,
   SVGGithub,
+  SVGList,
 }
