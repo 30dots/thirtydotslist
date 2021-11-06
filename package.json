@@ -1,15 +1,15 @@
 {
-  "name": "cardano-list",
+  "name": "thirty-dots-list",
   "version": "1.0.0",
   "private": true,
-  "description": "Ray Stake App",
+  "description": "Thirty Dots Curated List",
   "license": "MIT",
-  "author": "Ray Network",
+  "author": "30 Dots",
   "keywords": [
     "blockchain",
     "cardano",
-    "ray network",
-    "xray"
+    "30dots",
+    "ada"
   ],
   "scripts": {
     "build": "gatsby build",
@@ -23,10 +23,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ray-network/ray-home"
+    "url": "https://github.com/30dots/thirtydotslist"
   },
   "bugs": {
-    "url": "https://github.com/ray-network/ray-home/issues"
+    "url": "https://github.com/30dots/thirtydotslist/issues"
   },
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
