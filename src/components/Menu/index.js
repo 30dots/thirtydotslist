@@ -49,7 +49,7 @@ const Menu = () => {
           <Link to="/" className={`${style.menuLogo} me-4`}>
             <SVGList />
             <span>
-              <strong>CardanoList.io</strong>
+              <strong>30DotsList.io</strong>
             </span>
           </Link>
           <span className="text-muted flex-grow-1 d-none d-sm-inline pe-2 pe-md-4">
@@ -57,7 +57,7 @@ const Menu = () => {
             <span className={style.menuCardano}>
               <SVGCardano />
             </span>{" "}
-            Cardano projects by Ray Network
+            Cardano projects by 30 Dots
           </span>
           <span className="ms-auto me-3 d-none d-sm-inline">
             <a
