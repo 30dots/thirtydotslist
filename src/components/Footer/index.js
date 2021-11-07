@@ -1,17 +1,8 @@
 import React from "react"
 import { useSelector } from "react-redux"
-import { Input, Tooltip } from "antd"
 import {
   SVGRay,
   SVGCardano,
-  SVGWallet,
-  SVGTwitter,
-  SVGAtSign,
-  SVGChrome,
-  SVGApple,
-  SVGCategory,
-  SVGAndroid,
-  SVGInternet,
 } from "@/svg"
 import * as style from "./style.module.scss"
 
@@ -305,7 +296,7 @@ const Footer = () => {
                       <div>
                         <Tooltip title="Web Version">
                           <a
-                            href="https://raywallet.io"
+                            href="https://30dots.io"
                             className={style.footerApp}
                           >
                             <span className="ray__icon ray__icon--22">

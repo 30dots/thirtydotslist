@@ -56,7 +56,7 @@ const MegaMenu = () => {
           </span>
           <span className="ms-auto me-3 d-none d-sm-inline">
             <a
-              href="https://raywallet.io"
+              href="https://30dots.io"
               className="ant-btn ray__btn ray__btn--round"
               target="_blank"
               rel="noopener noreferrer"
@@ -396,7 +396,7 @@ const MegaMenu = () => {
                     <div>
                       <Tooltip title="Web Version">
                         <a
-                          href="https://raywallet.io"
+                          href="https://30dots.io"
                           className={style.footerApp}
                         >
                           <span className="ray__icon ray__icon--22">

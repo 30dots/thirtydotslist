@@ -61,7 +61,7 @@ const Menu = () => {
           </span>
           <span className="ms-auto me-3 d-none d-sm-inline">
             <a
-              href="https://raywallet.io"
+              href="https://30dots.io"
               className="ant-btn ray__btn ray__btn--round"
               target="_blank"
               rel="noopener noreferrer"
