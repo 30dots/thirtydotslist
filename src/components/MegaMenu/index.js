@@ -44,7 +44,7 @@ const MegaMenu = () => {
           <Link to="/" className={`${style.menuLogo} me-4`}>
             <SVGList />
             <span>
-              <strong>CardanoList.io</strong>
+              <strong>30DotsList.io</strong>
             </span>
           </Link>
           <span className="text-muted flex-grow-1 d-none d-sm-inline pe-2 pe-md-4">
@@ -52,7 +52,7 @@ const MegaMenu = () => {
             <span className={style.menuCardano}>
               <SVGCardano />
             </span>{" "}
-            Cardano projects by Ray Network
+            Cardano projects by 30 Dots
           </span>
           <span className="ms-auto me-3 d-none d-sm-inline">
             <a
@@ -61,7 +61,7 @@ const MegaMenu = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="pe-2">RayWallet</span>
+              <span className="pe-2">Connect Wallet</span>
               <span className="ray__icon">
                 <SVGWallet />
               </span>
@@ -179,10 +179,10 @@ const MegaMenu = () => {
                       </li>
                       <li>
                         <a
-                          href="https://cardanolist.io/"
+                          href="https://thirtydotslist.io/"
                           className="text-muted"
                         >
-                          CardanoList.io
+                          30DotsList.io
                         </a>
                       </li>
                       <li>
@@ -303,7 +303,7 @@ const MegaMenu = () => {
                             <SVGTwitter />
                           </span>
                           <h6 className="mb-0">
-                            <strong>Ray Network</strong>
+                            <strong>30 Dots</strong>
                           </h6>
                         </div>
                         <ul className="list-unstyled mb-5">
@@ -514,7 +514,7 @@ const MegaMenu = () => {
               Advanced Ecosystem for Cardano Blockchain Platform
             </p>
             <p className="mb-0 text-muted">
-              {new Date().getFullYear()} &copy; Ray Labs DAO
+              {new Date().getFullYear()} &copy; 30 Dots Labs DAO
             </p>
           </div>
         </div>

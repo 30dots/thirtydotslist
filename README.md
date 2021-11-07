@@ -1,5 +1,5 @@
 ### Cardano List ###
-https://cardanolist.io
+https://thirtydotslist.io
 
 ### Gatsby Documentation ###
 Please read documentation here https://www.gatsbyjs.com/docs/

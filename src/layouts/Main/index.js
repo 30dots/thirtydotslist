@@ -12,7 +12,7 @@ const MainLayout = ({ children }) => {
 
   return (
     <div className={style.layout}>
-      <Helmet titleTemplate="CardanoList.io | %s" title="Curated list of Cardano projects by Ray Network">
+      <Helmet titleTemplate="30DotsList.io | %s" title="Curated list of Cardano projects by 30 Dots">
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preload" href="/resources/font/circular.css" as="style" />
@@ -20,7 +20,7 @@ const MainLayout = ({ children }) => {
         <meta property="og:url" content="https://stake.rraayy.com" />
         <meta
           name="description"
-          content="CardanoList.io - Curated list of Cardano projects by Ray Network"
+          content="30DotsList.io - Curated list of Cardano projects by 30 Dots"
         />
       </Helmet>
       <div>

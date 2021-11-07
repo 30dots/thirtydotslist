@@ -395,7 +395,7 @@ const List = () => {
                       </div>
                       <div>
                         <h1 className="mb-0">
-                          <strong>CardanoList.io</strong>
+                          <strong>30DotsList.io</strong>
                         </h1>
                         <div className="text-muted">
                           Cardano Ecosystem
@@ -403,7 +403,7 @@ const List = () => {
                       </div>
                     </div>
                     <div className={`${style.bannerFlexInfo} text-muted`}>
-                      <div>Curated by cardanolist.io</div>
+                      <div>Curated by thirtydotslist.io</div>
                       <div>{updated && `Updated ${format(new Date(updated), 'MMMM dd, yyyy HH:mm')}`}</div>
                     </div>
                   </div>
@@ -579,7 +579,7 @@ const List = () => {
                 <SVGCamera />
               </span>
             </Tooltip>
-            <span className="text-muted">Curated by cardanolist.io</span>
+            <span className="text-muted">Curated by thirtydotslist.io</span>
           </div>
         </div>
       </Modal>

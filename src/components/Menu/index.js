@@ -18,7 +18,7 @@ const config = [
     url: "/",
   },
   {
-    title: "Upcoming ICOs",
+    title: "Upcoming IDOs",
     url: "/",
     disabled: true,
   },
@@ -69,7 +69,7 @@ const Menu = () => {
               <span className="ray__icon pe-2">
                 <SVGWallet />
               </span>
-              <span>RayWallet</span>
+              <span>Connect Wallet</span>
             </a>
           </span>
           <span

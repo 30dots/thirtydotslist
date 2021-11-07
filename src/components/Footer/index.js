@@ -22,7 +22,7 @@ const Footer = () => {
     <div className={style.outer}>
       <div className="ray__block mb-0">
         <div className="pb-5">
-          <div className={style.footerTop}>
+          {/* <div className={style.footerTop}>
             <div className="row">
               <div className="col-12 col-sm-8 mb-3">
                 <div className={`${style.footerLists} row`}>
@@ -99,10 +99,10 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="https://cardanolist.io"
+                          href="https://thirtydotslist.io"
                           className="text-muted"
                         >
-                          CardanoList.io
+                          30DotsList.io
                         </a>
                       </li>
                       <li>
@@ -215,7 +215,7 @@ const Footer = () => {
                             <SVGTwitter />
                           </span>
                           <h6 className="mb-0">
-                            <strong>Ray Network</strong>
+                            <strong>30 Dots</strong>
                           </h6>
                         </div>
                         <ul className="list-unstyled mb-5">
@@ -426,7 +426,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div>
             <div className="mb-2">
               <a
@@ -437,7 +437,7 @@ const Footer = () => {
               >
                 <SVGRay />
                 <span>
-                  <strong>Ray Network</strong>
+                  <strong>30 Dots</strong>
                 </span>
               </a>
             </div>
@@ -464,7 +464,7 @@ const Footer = () => {
               </span>
             </p>
             <p className="mb-0 text-muted">
-              {new Date().getFullYear()} &copy; Ray Labs DAO
+              {new Date().getFullYear()} &copy; 30 Dots DAO
             </p>
           </div>
         </div>
