@@ -5,6 +5,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sitemap",
+    'gatsby-plugin-netlify',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-sass`,
@@ -26,20 +27,6 @@ module.exports = {
           "@": require("path").resolve(__dirname, "src"),
         },
         extensions: ["js", "scss", "sass"],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-41062113-24",
-      },
-    },
-    {
-      resolve: `gatsby-plugin-yandex-metrika`,
-      options: {
-        trackingId: "84720916",
-        webvisor: true,
-        trackHash: true,
       },
     },
     {
